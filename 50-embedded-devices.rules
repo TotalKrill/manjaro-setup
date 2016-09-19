@@ -1,0 +1,4 @@
+# STM32 STLINK Programmer rules and own device rules
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", GROUP="uucp", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", GROUP="uucp", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="1234", GROUP="uucp", MODE="0666"
