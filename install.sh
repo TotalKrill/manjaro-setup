@@ -27,6 +27,7 @@ yaourtpkgs="\
     xcwd-git \
     spotify \
     kicad-git \
+    youtube-viewer-git \
     "
 
 services="""
@@ -42,6 +43,10 @@ removeables="\
 # Install some needed package
 echo Removing some software
 sudo pacman -Rsc $removeables --noconfirm
+
+echo Fixing mirrors!
+sudo pacman-mirrors -g
+echo Upgrading
 sudo pacman -Syu --force --noconfirm
 
 echo Installing: $packages
