@@ -26,6 +26,7 @@ yaourtpkgs="\
     neovim-symlinks \
     xcwd-git \
     spotify \
+    kicad-git \
     "
 
 services="""
