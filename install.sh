@@ -53,7 +53,7 @@ echo Installing: $packages
 sudo pacman -S --force --noconfirm $packages
 
 echo Installing from yaourt
-sudo yaourt -S --force --noconfirm $yaourtpkgs
+yaourt -S --force --noconfirm $yaourtpkgs
 
 # enable some stuff
 echo enabling: $services
