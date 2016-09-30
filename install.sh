@@ -44,6 +44,7 @@ virtlogd.socket
 removeables="\
     palemoon-bin \
     modemmanager \
+    vim \
     "
 # Install some needed package
 echo Removing some software
