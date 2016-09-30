@@ -18,16 +18,21 @@ packages="\
     qemu \
     owncloud-client \
     kdegraphics-okular \
-    openocd"
+    openocd \
+    pavucontrol \
+    pulseaudio \
+    pulseaudio-bluetooth \
+    pulseaudio-alsa \
+    "
 
 yaourtpkgs="\
     telegram-desktop \
     otf-inconsolata-powerline-git \
-    neovim-symlinks \
     xcwd-git \
     spotify \
     kicad-git \
     youtube-viewer-git \
+    neovim-symlinks \
     "
 
 services="""
