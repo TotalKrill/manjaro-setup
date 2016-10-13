@@ -12,7 +12,7 @@ packages="\
     clang \
     minicom \
     ack \
-    nm-applet \
+    network-manager-applet \
     virt-manager \
     cmake \
     qemu \
@@ -26,7 +26,7 @@ packages="\
     "
 
 yaourtpkgs="\
-    telegram-desktop \
+    telegram-desktop-bin \
     otf-inconsolata-powerline-git \
     xcwd-git \
     spotify \
@@ -45,6 +45,7 @@ removeables="\
     palemoon-bin \
     modemmanager \
     vim \
+    vi \
     "
 # Install some needed package
 echo Removing some software
@@ -59,7 +60,10 @@ echo Installing: $packages
 sudo pacman -S --force --noconfirm $packages
 
 echo Installing from yaourt
-yaourt -S --force --noconfirm $yaourtpkgs
+for package in $yaourtpkgs ; do
+    yaourt -S --force --noconfirm $package
+    echo $package
+done
 
 # enable some stuff
 echo enabling: $services
