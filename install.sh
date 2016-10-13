@@ -73,19 +73,23 @@ sudo systemctl start $services
 # fix udev rules
 
 user=$(whoami)
+echo setting some groups for user: $user
 # set some groups for manjaro and arch
 sudo usermod -aG wheel $user
 sudo usermod -aG uucp $user
 sudo usermod -aG kvm $user
 
 # Fix ltu printer system
+echo fixing ltu printer
 sudo sh -c 'echo "ServerName IPP.LTU.SE" > /etc/cups/client.conf'
 
 # Fix config files
+echo fixing some configs
 git clone https://github.com/TotalKrill/.dotfiles.git ~/.dotfiles
 ~/.dotfiles/install.sh
 
 # Fix vim settings
+echo fixing some nvim configs
 git clone --recurse-submodules https://github.com/TotalKrill/.nvim.git ~/.config/nvim
 nvim -c PlugInstall
 
